@@ -1,0 +1,91 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  color: #4a4458;
+  background: #faf9ff;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+.app-shell__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e7e2f3;
+  background: #ffffff;
+}
+
+.app-shell__brand {
+  color: #1c1530;
+  font-weight: 600;
+}
+
+.app-shell__nav {
+  display: flex;
+  gap: 12px;
+}
+
+.app-shell__link {
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.app-shell__link:hover {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.app-shell__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.app-shell__loading {
+  margin: 0;
+  padding: 48px 24px;
+  color: #6f6a84;
+  text-align: center;
+}
+
+.app-shell__footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e7e2f3;
+  color: #6f6a84;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-shell {
+    color: #c9c3da;
+    background: #12101b;
+  }
+
+  .app-shell__header,
+  .app-shell__footer {
+    border-color: #2d2840;
+    background: #1a1726;
+  }
+
+  .app-shell__brand {
+    color: #f1effa;
+  }
+
+  .app-shell__link {
+    color: #a78bfa;
+  }
+
+  .app-shell__link:hover {
+    background: rgba(167, 139, 250, 0.14);
+  }
+
+  .app-shell__loading {
+    color: #9a94b2;
+  }
+}
