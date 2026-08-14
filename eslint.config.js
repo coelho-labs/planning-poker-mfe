@@ -25,4 +25,10 @@ export default defineConfig([
       ],
     },
   },
+  {
+    files: ["src/components/ui/**"],
+    rules: {
+      "react-refresh/only-export-components": "off",
+    },
+  }
 ]);

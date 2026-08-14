@@ -20,7 +20,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    
+    "paths": {
+      "@/*": ["./src/*"],
+      "*": ["./@mf-types/*"]
+    }
   },
   "include": ["src"]
 }
