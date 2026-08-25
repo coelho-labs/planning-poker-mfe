@@ -61,6 +61,10 @@ export default function CreateRoom() {
       return;
     }
     setStatus("creating");
+    window.dispatchEvent(
+      new CustomEvent('cd-vignette:show', { detail: { message: "Criando sua sala..." } })
+    );
+
     setError(null);
     try {
       const [, room] = await Promise.all([
@@ -78,6 +82,7 @@ export default function CreateRoom() {
         name: moderatorNameValue,
         role: "moderator",
       });
+      window.dispatchEvent(new CustomEvent('cd-vignette:hide'));
       navigate(`../${room.id}`, { replace: true, relative: "path" });
     } catch {
       setStatus("idle");
@@ -97,7 +102,7 @@ export default function CreateRoom() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-md px-4 py-10">
+    <div className="mx-auto w-full min-w-3xl max-w-md px-4 py-10">
       <Link
         to=".."
         relative="path"
