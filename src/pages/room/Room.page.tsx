@@ -297,7 +297,7 @@ export default function RoomPage() {
   const isModerator = self?.role === "moderator";
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-6 px-4 py-8">
+    <div className="mx-auto flex w-full min-w-3xl max-w-7xl flex-1 flex-col gap-6 px-4 py-8">
       <Link
         to=".."
         relative="path"
@@ -339,7 +339,7 @@ export default function RoomPage() {
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+      <div className="grid gap-6 lg:grid-cols-2">
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between gap-2">
