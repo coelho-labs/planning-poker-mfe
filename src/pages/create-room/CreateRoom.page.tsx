@@ -62,7 +62,7 @@ export default function CreateRoom() {
     }
     setStatus("creating");
     window.dispatchEvent(
-      new CustomEvent('cd-vignette:show', { detail: { message: "Criando sua sala..." } })
+      new CustomEvent('cd-loading-plus:show', { detail: { message: "Criando sua sala..." } })
     );
 
     setError(null);
@@ -82,7 +82,7 @@ export default function CreateRoom() {
         name: moderatorNameValue,
         role: "moderator",
       });
-      window.dispatchEvent(new CustomEvent('cd-vignette:hide'));
+      window.dispatchEvent(new CustomEvent('cd-loading-plus:hide'));
       navigate(`../${room.id}`, { replace: true, relative: "path" });
     } catch {
       setStatus("idle");
