@@ -92,7 +92,7 @@ export default function CreateRoom() {
 
   if (status === "creating") {
     return (
-      <div className="flex flex-1 items-center justify-center p-6" aria-busy="true">
+      <div className="flex flex-1 h-full items-center justify-center p-6" aria-busy="true">
         <div className="flex flex-col items-center gap-3 text-muted-foreground">
           <Loader2 className="size-6 animate-spin text-foreground" aria-hidden="true" />
           <p className="text-sm">Criando sua sala...</p>
